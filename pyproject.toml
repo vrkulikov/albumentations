@@ -7,7 +7,7 @@ name = "albumentations"
 version = "0.4.6"
 description = "Fast image augmentation library and easy to use wrapper around other libraries."
 readme = "README.md"
-requires-python = ">=3.7,<3.10"
+requires-python = ">=3.9,<3.10"
 license = {text = "MIT"}
 authors = [
     {name = "Albumentations Team", email = "albumentations.info@gmail.com"}
