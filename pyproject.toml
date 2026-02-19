@@ -1,0 +1,89 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "albumentations"
+version = "0.4.6"
+description = "Fast image augmentation library and easy to use wrapper around other libraries."
+readme = "README.md"
+requires-python = ">=3.7,<3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Albumentations Team", email = "albumentations.info@gmail.com"}
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+dependencies = [
+    "numpy>=1.17.5",
+    "six>=1.12.0",
+    "imgaug>=0.2.9",
+    "typing-extensions>=3.7.4"
+]
+
+[project.optional-dependencies]
+tests = [
+    "pytest>=6.0.0",
+    "pytest-cov>=2.10.0",
+    "pytest-mock>=3.3.0",
+    "pytest-xdist>=2.1.0"
+]
+docs = [
+    "sphinx>=3.0.0",
+    "sphinx-rtd-theme>=0.5.0",
+    "recommonmark>=0.7.0"
+]
+dev = [
+    "black>=21.0.0",
+    "flake8>=3.8.0",
+    "isort>=5.7.0",
+    "mypy>=0.812.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/albumentations-team/albumentations"
+Documentation = "https://albumentations.ai/docs"
+"Bug Tracker" = "https://github.com/albumentations-team/albumentations/issues"
+"Source Code" = "https://github.com/albumentations-team/albumentations"
+
+[tool.black]
+line-length = 88
+target-version = ['py37']
+
+[tool.isort]
+line_length = 88
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+ensure_newline_before_comments = true
+lines_after_imports = 2
+
+[tool.mypy]
+python_version = "3.7"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
